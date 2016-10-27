@@ -4,4 +4,4 @@ apps:
     exec_mode: fork
     watch  : true
     env:
-      NODE_ENV: production
+      NODE_ENV: development
