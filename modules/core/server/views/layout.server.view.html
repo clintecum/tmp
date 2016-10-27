@@ -32,24 +32,194 @@
   <link href="{{favicon}}" rel="shortcut icon" type="image/x-icon">
 
   <!-- Application CSS Files -->
-  {% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">{% endfor %}
+  <!-- {% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">{% endfor %} -->
+
+
+  <link rel="stylesheet" href="modules/core/client/css/font-awesome.min.css">
+  <link rel="stylesheet" href="modules/core/client/css/md/bootstrap.min.css">
+  <link rel="stylesheet" href="modules/core/client/css/md/style.css">    
+
+
+
+
+  <style>
+      html,
+      body,
+      header,
+      .view {
+          height: 100%;
+      }
+      /* Navigation*/
+      
+      .navbar {
+          background-color: #212121;
+      }
+
+      div.empty-space {
+          height: 5em;
+          width: 100%;
+      }
+      div.form-header {
+          background: #131d56 !important;
+      }
+      .top-nav-collapse {
+          background-color: #212121;
+      }
+      
+      @media only screen and (max-width: 768px) {
+          .navbar {
+              background-color: #5e35b1;
+          }
+      }
+
+      .margin-top {
+          margin-top: 5em;
+      }
+      
+      .box-shade {
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+      .view {
+          /*background: url("http://mdbootstrap.com/images/regular/people/img%20(51).jpg")no-repeat center center fixed;*/
+          
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+      }
+
+      .view-1 {
+          background: url("modules/core/client/img/adobe/6.jpeg")no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          height: 960px;
+          border-bottom: 2px solid #212121;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          margin-bottom: 5em;
+      }
+
+      .view-2 {
+          background: url("modules/core/client/img/adobe/12.jpeg")no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          border-bottom: 2px solid #212121;
+          border-top: 2px solid #212121;
+          height: 960px;
+          box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22),0 -14px 20px -10px rgba(0, 0, 0, 0.25);
+
+      }
+
+      .view-3 {
+
+          background: url("modules/core/client/img/adobe/11.jpeg")no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          border-bottom: 2px solid #212121;
+          border-top: 2px solid #212121;
+          height: 960px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22),0 -14px 20px -10px rgba(0, 0, 0, 0.25);
+      }
+      
+      @media (max-width: 768px) {
+          .full-bg-img,
+          .view {
+              height: auto;
+              position: relative;
+          }
+      }
+      
+      .description {
+          padding-bottom: 3rem;
+          color: #fff
+      }
+      
+      @media (max-width: 992px) {
+          .description {
+              padding-top: 7rem;
+              text-align: center;
+          }
+      }
+      
+      .full-bg-img .card {
+          background-color: rgba(255, 255, 255, 0.8);
+      }
+      footer.page-footer {
+          background-color: #212121;
+      }
+      .card-block {
+          margin-top: 3em;
+      }
+
+
+      .hole-bg-img {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          overflow: hidden;
+          top: 0;
+          left: 0;
+          box-shadow: inset 0 0 800px black;
+      }
+
+      section.border-boxed {
+          box-sizing: border-box;
+      }
+
+
+
+  </style>
+
+
+
+  <link rel="stylesheet" href="modules/core/client/css/responsive/gt-545.css">
+  <link rel="stylesheet" href="modules/core/client/css/responsive/gt-1000.css">
+  <link rel="stylesheet" href="modules/core/client/css/responsive/gt-1200.css">
+  <link rel="stylesheet" href="modules/core/client/css/responsive/gt-1450.css">
+  <link rel="stylesheet" href="modules/core/client/css/responsive/gt-1650.css">
 </head>
 
-<body class="ng-cloak">
-  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <section class="content">
-    <section class="container">
-      {% block content %}{% endblock %}
-    </section>
-  </section>
+<body>
+
+
+  {% block content %}{% endblock %}
 
   <!--Embedding The User Object-->
   <script type="text/javascript">
     var user = {{ user | json | safe }};
   </script>
 
+
+
+  <script type="text/javascript" src="/modules/core/client/lib/jquery-2.2.3.js"></script>
+  <script type="text/javascript" src="/modules/core/client/lib/md.js"></script>
+  <script type="text/javascript" src="/modules/core/client/lib/tether.js"></script>
+  <script type="text/javascript" src="/modules/core/client/lib/bootstrap.js"></script>
+
   <!--Load The Socket.io File-->
   <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+
+  <script type="text/javascript" src='/modules/core/client/lib/angular.min.js'></script>
+  <script type="text/javascript" src='/modules/core/client/lib/angular-resource.min.js'></script>
+  <script type="text/javascript" src='/modules/core/client/lib/angular-animate.min.js'></script>
+  <script type="text/javascript" src='/modules/core/client/lib/angular-file-upload.min.js'></script>
+  <script type="text/javascript" src='/modules/core/client/lib/angular-scroll.js'></script>
+  <script type="text/javascript" src='/modules/core/client/lib/angular-aria.min.js'></script>
+  <script type="text/javascript" src='/modules/core/client/lib/angular-material.min.js'></script>
+  <script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+
+ 
+  
+
+  <script>
+        new WOW().init();
+  </script>
 
   <!--Application JavaScript Files-->
   {% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>{% endfor %}

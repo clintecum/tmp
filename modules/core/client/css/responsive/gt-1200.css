@@ -1,0 +1,13 @@
+@media(min-width: 1200px) {
+	img#img-self {
+		margin-top: -5.5em;
+	}
+	span#hack-up {
+		position: relative;
+		top: -1.25em;
+	}
+	span#text {
+		position: relative;
+		top: 24em;
+	}
+}

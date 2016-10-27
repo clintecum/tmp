@@ -1,0 +1,68 @@
+@media (min-width: 545px) {
+	.extra-mg a {
+		margin-top: .5em;
+	}
+	h2#chris-header {
+		width: 15em;
+		margin-top: -4.35em;
+		font-weight: 900;
+	    color: #eefaff;
+	    letter-spacing: .1pc;
+		margin-left: .8em;
+		text-shadow: 1px 1px 1px black;
+	}
+	ul.nav li.nav-item a#blog-link {
+	    position: relative;
+	    left: 5em;
+	    font-size: .9em;
+	    top: .15em;
+	}
+	h1#h1-contact {
+		margin-left: -1.5em;
+	}
+	ul#social-media-links {
+		position: relative;
+		top: .35em;
+	}
+	section#about {
+		background: #FAFAFA;
+		height: 1000px;
+		overflow: hidden;
+		margin-top: -.1em;
+		box-shadow: 0 1px 8px 0 rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.12);
+	}
+	section#contact {
+		margin-left: 6.5em;
+	}
+	button#submit-form {
+		padding-top: .75em;
+	}
+	img.img-set-max {
+		max-height: 325px;
+		width: 100%;
+	}
+	img#img-self {
+		position: relative;
+		top: 24.25em;
+	}
+	div#about-me-content {
+		position: relative;
+		top: -3em;
+	}
+	div#about-content-details {
+		position: relative;
+		top: -18em;
+	}
+	span#hack-up {
+		position: relative;
+		top: -30em;
+	}
+	span#hack-up {
+		position: relative;
+		top: -1.25em;
+	}
+	span#text {
+		position: relative;
+		top: 24em;
+	}
+}

@@ -1,11 +1,11 @@
 (function (window) {
   'use strict';
 
-  var applicationModuleName = 'mean';
+  var applicationModuleName = 'app';
 
   var service = {
     applicationModuleName: applicationModuleName,
-    applicationModuleVendorDependencies: ['ngResource', 'ngAnimate', 'ngMessages', 'ui.router', 'ui.bootstrap', 'angularFileUpload'],
+    applicationModuleVendorDependencies: ['ngResource', 'ngMaterial', 'ngMdIcons', 'duScroll','ngAnimate', 'ngMessages', 'ui.router', 'ui.bootstrap', 'angularFileUpload'],
     registerModule: registerModule
   };
 
